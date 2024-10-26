@@ -9,3 +9,4 @@ class Config(object):
       CAPTION_TEXT = os.environ.get("CAPTION_TEXT", "")
       CAPTION_POSITION = os.environ.get("CAPTION_POSITION", "nil")
       ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "AvishkarPatil")
+      ADMINS = [int(admin_id) for admin_id in os.getenv("ADMINS", "").split(",") if admin_id.isdigit()]
